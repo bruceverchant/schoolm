@@ -1,4 +1,4 @@
-# TPT School.
+# SchoolM.
 
 A school management system built with [Next.js](https://nextjs.org), [Prisma](https://prisma.io), and [SQLite](https://sqlite.org). Tracks students, classes, attendance, grades, and more.
 
@@ -43,8 +43,8 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 SSH into any Linux server (Ubuntu recommended), clone the repo, and run:
 
 ```bash
-git clone https://github.com/PhillipC05/tpt-school.git
-cd tpt-school
+git clone https://github.com/bruceverchant/SchoolM.git
+cd SchoolM
 chmod +x deploy.sh
 ./deploy.sh
 ```
@@ -95,8 +95,8 @@ apt-get install -y nodejs
 npm install -g pm2
 
 # 4. Clone the repo
-git clone https://github.com/PhillipC05/tpt-school.git
-cd tpt-school
+git clone https://github.com/bruceverchant/SchoolM.git
+cd SchoolM
 
 # 5. Set up environment
 cp .env.example .env
@@ -111,14 +111,14 @@ npx prisma migrate deploy
 npm run build
 
 # 7. Start
-pm2 start .next/standalone/server.js --name tpt-school
+pm2 start .next/standalone/server.js --name SchoolM
 pm2 save
 pm2 startup
 
 # 8. Set up a reverse proxy (optional but recommended)
 #    Install Nginx to serve on port 80/443 with a domain name:
 apt-get install -y nginx
-#    Then configure /etc/nginx/sites-available/tpt-school to proxy
+#    Then configure /etc/nginx/sites-available/SchoolM to proxy
 #    requests to localhost:3000 and add SSL via Certbot.
 ```
 
